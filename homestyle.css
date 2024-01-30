@@ -20,3 +20,16 @@
     color: #7D246D;
     font-size: 120%;
 }
+
+body {
+    font-family: 'Segoe UI';
+    background-color: rgba(77, 77, 77, 0.66); /* Reduced opacity for the background color */
+    background-blend-mode: hue;
+    background-image: url('disabled_person_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

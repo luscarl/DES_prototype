@@ -19,41 +19,53 @@
 
         <div class = "main-body">
             <h1>Find the Right Provider</h1>
+            <form action = "result.html" method = "get">
+                <div class = "input-group">
+                    <label for = "disability"> Disability Type </label>
+                    <select name = "disability" id = "disability" required>
+                        <option value="">--Select Disability Type--</option>
+                        <option value="visual">Visual Impairment</option>
+                        <option value="hearing">Hearing Impairment</option>
+                        <option value="mobility">Mobility Impairment</option>
+                        <option value="cognitive">Cognitive Impairment</option>
+                    </select>
 
-            <div class = "input-group">
-                <label for = "disability"> Disability Type </label>
-                <select name = "disability" id = "disability" required>
-                    <option value="">--Select Disability Type--</option>
-                    <option value="visual">Visual Impairment</option>
-                    <option value="hearing">Hearing Impairment</option>
-                    <option value="mobility">Mobility Impairment</option>
-                    <option value="cognitive">Cognitive Impairment</option>
-                </select>
+                    <label for = "postcode"> Postcode </label>
+                    <input type = "text" id = "postcode">
 
-                <label for = "postcode"> Postcode </label>
+                    <label for = "distance"> Distance (km) </label>
+                    <select name ="distance" id="distance" required>
+                        <option value="">--Select Distance--</option>
+                        <option value="10">within 10 km</option>
+                        <option value="25">within 25 km</option>
+                        <option value="50">within 50 km</option>
+                        <option value="100">within 100 km</option>
+                    </select>
 
-                <label for = "distance"> Distance (km) </label>
-                <select name ="distance" id="distance" required>
-                    <option value="">--Select Distance--</option>
-                    <option value="10">within 10 km</option>
-                    <option value="25">within 25 km</option>
-                    <option value="50">within 50 km</option>
-                    <option value="100">within 100 km</option>
-                </select>
+                    <label for = "service"> Type of Service </label>
+                    <select name = "service" id = "service" required>
+                        <option value="">--Select a Service--</option>
+                        <option value="employment">Disability Management Services</option>
+                        <option value="more">Employment Support Services</option>
+                    </select>
 
-                <label for = "service"> Type of Service </label>
-                <select name = "service" id = "service" required>
-                    <option value="">--Select a Service--</option>
-                    <option value="employment">Disability Management Services</option>
-                    <option value="more">Employment Support Services</option>
-                </select>
+                    <label for = "prompt"> Prompt </label>
+                    <input type = "text" id = "prompt">
 
-                <label for = "prompt"> Prompt </label>
-                <input type = "text" id = "prompt">
+                </div>
 
-            </div>
+                <button type = "submit"> Enter </button>
+            </form>
+        </div>
 
+        <div class = "info-box">
+            <p>Use the form above to search for Service Providers</p>
+            <p><strong>DES - Employment Support Services:</strong> For people who have a permanent disability, illness, or injury. It provides regular ongoing support to find and keep a job.</p>
+            <p><strong>DES - Disability Management Services:</strong> For people who have a disability, illness, or injury and need occational support to find and keep a job.</p>
+        
+            For more information, visit the FAQ page.
         </div>
 
     </body>
+    
 </html>
