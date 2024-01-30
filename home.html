@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find the right provider</title>
+        <link rel="stylesheet" href="homestyle.css">
+    </head>
+
+    <body>
+        <div class = "top-navigation">
+            <a href="https://www.jobaccess.gov.au/home">Home</a>
+            <a href="https://www.jobaccess.gov.au/about-jobaccess">About Us</a>
+            <a href="https://www.jobaccess.gov.au/news-media">News & Media</a>
+            <a href="https://www.jobaccess.gov.au/complaints">Complaints & Report Abuse</a>
+            <a href="https://www.jobaccess.gov.au/contacts">Contacts</a>
+            <a href="tel:1800464800">1800 464 800</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://www.jobaccess.gov.au/other-languages">Other Languages</a>
+        </div>
+
+        <div class = "main-body">
+            <h1>Find the Right Provider</h1>
+
+            <div class = "input-group">
+                <label for = "disability"> Disability Type </label>
+                <select name = "disability" id = "disability" required>
+                    <option value="">--Select Disability Type--</option>
+                    <option value="visual">Visual Impairment</option>
+                    <option value="hearing">Hearing Impairment</option>
+                    <option value="mobility">Mobility Impairment</option>
+                    <option value="cognitive">Cognitive Impairment</option>
+                </select>
+
+                <label for = "postcode"> Postcode </label>
+
+                <label for = "distance"> Distance (km) </label>
+                <select name ="distance" id="distance" required>
+                    <option value="">--Select Distance--</option>
+                    <option value="10">within 10 km</option>
+                    <option value="25">within 25 km</option>
+                    <option value="50">within 50 km</option>
+                    <option value="100">within 100 km</option>
+                </select>
+
+                <label for = "service"> Type of Service </label>
+                <select name = "service" id = "service" required>
+                    <option value="">--Select a Service--</option>
+                    <option value="employment">Disability Management Services</option>
+                    <option value="more">Employment Support Services</option>
+                </select>
+
+                <label for = "prompt"> Prompt </label>
+                <input type = "text" id = "prompt">
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

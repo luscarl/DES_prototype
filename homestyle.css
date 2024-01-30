@@ -1,0 +1,22 @@
+.top-navigation {
+    background-color: black;
+    display: block;
+    padding: 30px;
+}
+
+.top-navigation a {
+    color: white;
+    font: normal;
+
+    padding: 14px 14px;
+
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.top-navigation a:hover {
+    background-color: white;
+    color: #7D246D;
+    font-size: 120%;
+}
