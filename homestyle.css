@@ -1,16 +1,25 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: rgba(77, 77, 77, 0.77); /* Reduced opacity for the background color */
+    background-blend-mode: hue;
+    background-image: url('disabled_person_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+  }
+
 .top-navigation {
     background-color: black;
-    display: block;
-    padding: 30px;
+    display: flex;
+    padding: 15px;
+
 }
 
 .top-navigation a {
     color: white;
-    font: normal;
-
-    padding: 14px 14px;
-
-    align-items: center;
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -21,15 +30,79 @@
     font-size: 120%;
 }
 
-body {
-    font-family: 'Segoe UI';
-    background-color: rgba(77, 77, 77, 0.66); /* Reduced opacity for the background color */
-    background-blend-mode: hue;
-    background-image: url('disabled_person_bg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+.login-container {
+    margin-left: auto;
+    display: flex;
+}
+
+.main-body {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+
+}
+
+h1 {
+    color: #7D246D;
+    text-align: center;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+    size: 120%;
+    margin-left: 20px;
+
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input-group select, .input-group input[type = "text"] {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    box-sizing: content-box;
+}
+
+.input-group button {
+    width: 94.6%;
+    padding: 12px 12px;
+    background-color: #7D246D;
+    color: #ffffff;
+    margin-top: 16px;
+    
+    cursor: pointer;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: justify;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.wrapper {
+    background-color: #7D246D;
+    padding: 50px;
+}
+
+.image {
+    display:block;
+    text-align: center;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.contact-us {
+    display:block;
+    padding: 30px;
+    color: #ffffff;
+}

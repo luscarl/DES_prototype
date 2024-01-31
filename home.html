@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<!-- references:
+background image from: https://www.forbes.com/sites/stevenaquino/2022/06/16/in-new-interview-microsoft-chief-accessibility-officer-jenny-lay-flurrie-talks-the-importance-of-gathering-reliable-data-and-further-bridging-the-disability-divide/?sh=7f8d8a92772c -->
+<!-- how to use hyperlink in html: https://www.w3schools.com/html/html_links.asp -->
+<!-- hyperlink style in html: https://www.w3schools.com/html/html_links_colors.asp -->
 <html>
     <head>
         <title>Find the right provider</title>
@@ -15,7 +20,13 @@
             <a href="tel:1800464800">1800 464 800</a>
             <a href="faq.html">FAQ</a>
             <a href="https://www.jobaccess.gov.au/other-languages">Other Languages</a>
+
+            <div class = "login-container">
+                <a href = ""> Login </a>
+                <a href = ""> Sign Up </a>
+            </div>
         </div>
+        
 
         <div class = "main-body">
             <h1>Find the Right Provider</h1>
@@ -52,20 +63,39 @@
                     <label for = "prompt"> Prompt </label>
                     <input type = "text" id = "prompt">
 
+                    <button type = "submit"> Enter </button>
                 </div>
-
-                <button type = "submit"> Enter </button>
             </form>
+
+            <div class = "info-box">
+                <p>Use the form above to search for Service Providers</p>
+                <p><strong>DES - Employment Support Services:</strong> For people who have a permanent disability, illness, or injury. It provides regular ongoing support to find and keep a job.</p>
+                <p><strong>DES - Disability Management Services:</strong> For people who have a disability, illness, or injury and need occational support to find and keep a job.</p>
+            
+                For more information, visit the FAQ page.
+            </div>
         </div>
 
-        <div class = "info-box">
-            <p>Use the form above to search for Service Providers</p>
-            <p><strong>DES - Employment Support Services:</strong> For people who have a permanent disability, illness, or injury. It provides regular ongoing support to find and keep a job.</p>
-            <p><strong>DES - Disability Management Services:</strong> For people who have a disability, illness, or injury and need occational support to find and keep a job.</p>
         
-            For more information, visit the FAQ page.
-        </div>
 
     </body>
-    
+
+    <footer>
+        <div class = "wrapper">
+            <p>
+                <div class = "image">
+                    <img src="jobaccess.jpg">
+                </div>
+            </p>
+
+            <div class = "contact-us">
+                <p>
+                    For confidential expert advice on matters relating to the employment of people with disability, contact the JobAccess Advisers free of charge.
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
 </html>
