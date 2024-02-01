@@ -14,11 +14,16 @@
             ut.text = content;
 
             function txt2Speech() {
-                window.speechSynthesis.speak(ut)
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel()
+                }
+                else{
+                    window.speechSynthesis.speak(ut)
+                }
             }
 
             document.getElementById('read-button').addEventListener('click', txt2Speech)
-        })
+    })
 </script>
 
 <body>
