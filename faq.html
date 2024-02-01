@@ -5,6 +5,22 @@
     <link rel="stylesheet" href="faqstyle.css">
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            let content = document.querySelector('.main-body').innerText;
+            console.log(content)
+            
+            let ut = new SpeechSynthesisUtterance();
+            ut.text = content;
+
+            function txt2Speech() {
+                window.speechSynthesis.speak(ut)
+            }
+
+            document.getElementById('read-button').addEventListener('click', txt2Speech)
+        })
+</script>
+
 <body>
     <body>
         <div class = "top-navigation">
@@ -29,7 +45,6 @@
 
         <div class = "main-body">
             <h1><strong> Frequently Asked Questions - JobAccess</strong></h1>
-        
             
             <div class = "faq-box1">
                 <h3> 1. What is JobAccess?</h3>

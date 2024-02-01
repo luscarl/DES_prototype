@@ -11,8 +11,19 @@ background image from: https://www.forbes.com/sites/stevenaquino/2022/06/16/in-n
     </head>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let content = document.querySelector('.main-body').innerText;
+            console.log(content)
+            
+            let ut = new SpeechSynthesisUtterance();
+            ut.text = content;
 
-        
+            function txt2Speech() {
+                window.speechSynthesis.speak(ut)
+            }
+
+            document.getElementById('read-button').addEventListener('click', txt2Speech)
+        })
     </script>
     <body>
         <div class = "top-navigation">

@@ -3,10 +3,176 @@
 
     <head>
         <title> Results Page </title>
-        <link rel = "styleshet" href = "resultstyle.css">
-    </head> 
+        <link rel="stylesheet" href="resultstyle.css">
+    </head>
+
+    <script>
+        function applyFilter() {
+            let filterDistance = parseFloat(document.getElementById('filterDistance').value);
+            let providers = Array.from(document.querySelectorAll('.service-provider'));
+        
+            providers.forEach(provider => {
+                let distance = parseFloat(provider.getAttribute('data-dist'));
+                console.log("Provider Distance: ", distance);
+        
+                if (isNaN(filterDistance) || distance <= filterDistance) {
+                    provider.style.display = ''; 
+                } else {
+                    provider.style.display = 'none'; 
+                }
+            });
+        }
+
+        function applySort() {
+            let sortOption = document.getElementById('sortOptions').value;
+            let providers = Array.from(document.querySelectorAll('.service-provider'));
+
+            providers.sort((a, b) => {
+                // Retrieve the relevant values based on the selected sort option.
+                let valueA = parseFloat(a.getAttribute(sortOption === 'distance' ? 'data-dist' : 'data-probability'));
+                let valueB = parseFloat(b.getAttribute(sortOption === 'distance' ? 'data-dist' : 'data-probability'));
+
+                // Perform the sorting.
+                return sortOption === 'distance' ? valueA - valueB : valueB - valueA;
+            });
+    
+            let container = document.querySelector('.main-body');
+            container.innerHTML = '<h1><strong>Relevant DES Service Providers</strong></h1>';
+            providers.forEach(provider => container.appendChild(provider));
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let content = document.querySelector('.main-body').innerText;
+            console.log(content)
+            
+            let ut = new SpeechSynthesisUtterance();
+            ut.text = content;
+
+            function txt2Speech() {
+                window.speechSynthesis.speak(ut)
+            }
+
+            document.getElementById('read-button').addEventListener('click', txt2Speech)
+        })
+    </script>
+
+    <body>
+        <div class = "top-navigation">
+            <a href="https://www.jobaccess.gov.au/home">Home</a>
+            <a href="https://www.jobaccess.gov.au/about-jobaccess">About Us</a>
+            <a href="https://www.jobaccess.gov.au/news-media">News & Media</a>
+            <a href="https://www.jobaccess.gov.au/complaints">Complaints & Report Abuse</a>
+            <a href="https://www.jobaccess.gov.au/contacts">Contacts</a>
+            <a href="tel:1800464800">1800 464 800</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://www.jobaccess.gov.au/other-languages">Other Languages</a>
+
+            <div class = "login-container">
+                <a href = ""> Login </a>
+                <a href = ""> Sign Up </a>
+            </div>
+        </div>
+
+        <div class = 'read'>
+            <button id = "read-button"> Text to Speech </button>
+        </div>
+
+        <div class = "controls">
+            <div class = "filter">
+                <label for="filterDistance"> Filter by Distance (km): </label>
+                <input type="number" id="filterDistance" name="filterDistance" min="0" step="0.1">
+                <button onclick="applyFilter()">Filter</button>
+            </div>
+
+            <div class="center-sort-controls"> <!-- Apply new class to center sort controls -->
+                <label for="sortOptions">Sort by:</label>
+                <select id="sortOptions" name="sortOptions">
+                    <option value="distance">Distance</option>
+                    <option value="probability">Matching Probability</option>
+                </select>
+                <button onclick="applySort()">Sort</button>
+            </div>
+        </div>
+
+        <div class = "main-body">
+            <h1><strong>Relevant DES Service Providers</strong></h1>
+
+            <div class="service-provider" data-probability= '50' data-dist = '0.2'>
+                <h3>APM Employment Services NORTH SYDNEY</h3>
+                <p><strong>Link:</strong> <a href="http://www.apm.net.au" target="_blank">Visit Website</a></p>
+                <p><strong>Address:</strong> Office 636, 100 Walker Street, NORTH SYDNEY NSW 2060 <span class="distance">0.2km away</span></p>
+                <p><strong>Phone:</strong> (13) 0036 6047</p>
+                <p><strong>Service Type:</strong> DES - Disability Management Service</p>
+                <p><strong>Specialisation:</strong> All Job Seekers</p>
+                <p><strong>Service Satisfaction:</strong> 80%</p>
+                <div class="progress-bar" style="width: 200px; height: 20px; background-color: #0000001f; border-color: black; border-radius: 3px;">
+                    <div class="progress" style="width: 80%; height: 100%; background-color: green;"></div>
+                </div>
+                <p><strong>Comments:</strong> "Amazing service. I got the job that I wanted."</p>
+            </div>
+
+            <div class="service-provider" data-probability= '50' data-dist = '1.8'>
+                <h3>Jobsupport ST LEONARDS</h3>
+                <p><strong>Link:</strong> <a href="https://jobsupport.org.au" target="_blank">Visit Website</a></p>
+                <p><strong>Address:</strong> Suite 6.02, 69 Christie Street,
+                    ST LEONARDS NSW 2065 <span class="distance">1.8km away</span></p>
+                <p><strong>Phone:</strong> (02) 94131633</p>
+                <p><strong>Service Type:</strong> DES - Employment Support Service</p>
+                <p><strong>Specialisation:</strong> (IQ<=60) - Moderate Intellectual Disability</p>
+                <p><strong>Service Satisfaction:</strong> 50%</p>
+                <div class="progress-bar" style="width: 200px; height: 20px; background-color: #0000001f; border-color: black; border-radius: 3px;">
+                    <div class="progress" style="width: 50%; height: 100%; background-color: orange;"></div>
+                </div>
+                <p><strong>Comments:</strong> "Poor service. Did not match me to my desired job."</p>
+            </div>
+
+            <div class="service-provider" data-probability = '30' data-dist = '3.3'>
+                <h3>uLaunch Pty Ltd. SYDNEY</h3>
+                <p><strong>Link:</strong> <a href="https://jobsupport.org.au" target="_blank">Visit Website</a></p>
+                <p><strong>Address:</strong> Level 6, 107 Pitt Street
+                    SYDNEY NSW 2000 <span class="distance">3.3km away</span></p>
+                <p><strong>Phone:</strong> (18) 00319502</p>
+                <p><strong>Service Type:</strong> DES - Employment Support Service</p>
+                <p><strong>Specialisation:</strong> All Job Seekers</p>
+                <p><strong>Service Satisfaction:</strong> 30%</p>
+                <div class="progress-bar" style="width: 200px; height: 20px; background-color: #0000001f; border-color: black; border-radius: 3px;">
+                    <div class="progress" style="width: 30%; height: 100%; background-color: orangered;"></div>
+                </div>
+                <p><strong>Comments:</strong> "Poor Service and bad attitude."</p>
+            </div>
+
+            <div class="service-provider" data-probability= '10' data-dist = '0.1'>
+                <h3>AimBig Employment Sydney</h3>
+                <p><strong>Link:</strong> <a href="https://www.aimbigemployment.com.au/" target="_blank">Visit Website</a></p>
+                <p><strong>Address:</strong> Suite G.02, Ground Floor, 233 Castlereagh Street
+                    SYDNEY NSW 2000 <span class="distance">0.1 km away</span></p>
+                <p><strong>Phone:</strong> (13) 00034997</p>
+                <p><strong>Service Type:</strong> DES - Employment Support Service</p>
+                <p><strong>Specialisation:</strong> All Job Seekers</p>
+                <p><strong>Service Satisfaction:</strong> 10%</p>
+                <div class="progress-bar" style="width: 200px; height: 20px; background-color: #0000001f; border-color: black; border-radius: 3px;">
+                    <div class="progress" style="width: 10%; height: 100%; background-color: red;"></div>
+                </div>
+                <p><strong>Comments:</strong> "Very Poor service. Not recommended."</p>
+            </div>
+
+            <div class = "pages">
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers" href="">2</a>
+                <a class="page-numbers" href="">3</a>
+                <a class="page-numbers" href="">4</a>
+                <a class="page-numbers" href="">5</a>
+                <span class="page-dots">…</span>
+                <a class="page-numbers" href="">next</a>
+                <a class="page-numbers" href="">last</a>
+            </div>
+        </div>
 
 
+        
+
+    </body>
 
 
 

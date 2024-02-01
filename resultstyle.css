@@ -1,0 +1,144 @@
+
+.top-navigation {
+    background-color: black;
+    display: flex;
+    padding: 15px;
+
+}
+
+.top-navigation a {
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* i think the font-size change on hover rly highlights but 
+currently it looks ugly.  */
+.top-navigation a:hover {
+    background-color: white;
+    color: #7D246D;
+    font-size: 120%;
+}
+
+.login-container {
+    margin-left: auto;
+    display: flex;
+}
+
+.main-body {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-provider {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #7D246D;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    background-color: #ffffff; /* Light green background color */
+}
+
+.service-provider h3 {
+    color: #7D246D;
+    margin-bottom: 15px;
+}
+
+.service-provider a {
+    color: #7D246D;
+    text-decoration: none;
+}
+
+.distance {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #7D246D;
+    color: #fff;
+    border-radius: 0 8px 0 8px;
+}
+
+strong {
+    color: #7D246D;
+}
+
+
+h1 {
+    color: #7D246D;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-numbers, .page-dots {
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.page-numbers:hover {
+    background-color: #7D246D;
+    color: #ffffff
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    padding: 6px;
+    font-size: 14px;
+}
+
+.controls button {
+    padding: 8px 12px; /* Adjust padding for better appearance */
+    font-size: 14px;
+    background-color: #7D246D;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin to separate the buttons */
+}
+
+.controls button:hover {
+    background-color: #ffffff;
+    color: #7D246D;
+}
+
+.center-sort-controls {
+    display: flex;
+    align-items: center;
+}
+
+.read {
+    position: fixed;
+    bottom: 10px;
+    right : 10px;
+    padding: 10px;
+}
