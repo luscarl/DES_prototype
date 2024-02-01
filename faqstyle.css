@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI';
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.top-navigation {
+    background-color: black;
+    display: flex;
+    padding: 15px;
+    
+}
+
+.top-navigation a {
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.top-navigation a:hover {
+    background-color: white;
+    color :#7D246D;
+}
+
+.login-container {
+    margin-left: auto;
+    display: flex;
+}
+
+.main-body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #7D246D;
+    margin-bottom: 20px;
+}
+
+.faq-box1, .faq-box2, .faq-box3, .faq-box4, .faq-box5,
+.faq-box5, .faq-box6, .faq-box7, .faq-box8, .faq-box9,
+.faq-box10, .faq-box11 {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #7D246D;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    background-color: #ffffff; /* Light green background color */
+}
+
+.faq-box p {
+    margin: 10px;
+}
+
+.read {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+}

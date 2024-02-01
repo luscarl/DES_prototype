@@ -24,6 +24,8 @@ body {
     font-size: 20px;
 }
 
+/* i think the font-size change on hover rly highlights but 
+currently it looks ugly.  */
 .top-navigation a:hover {
     background-color: white;
     color: #7D246D;
@@ -105,4 +107,11 @@ h1 {
     display:block;
     padding: 30px;
     color: #ffffff;
+}
+
+.read {
+    position: fixed;
+    bottom: 10px;
+    right : 10px;
+    padding: 10px;
 }
